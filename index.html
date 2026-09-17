@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, iel ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles"></div>
+
+  <main class="app">
+    <!-- LOGIN -->
+    <section class="screen active" id="loginScreen">
+      <div class="login-card">
+        <div class="tiny">A LITTLE SURPRISE FOR</div>
+        <h1>For You, <em>iel</em> ♡</h1>
+        <p class="muted">Enter the secret code to open your gift.</p>
+
+        <div class="dots" id="codeDots">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="keypad">
+          <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+          <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+          <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+          <button class="ghost"></button><button data-key="0">0</button><button id="backspace">⌫</button>
+        </div>
+        <p class="hint">Hint: your birthday ✦</p>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY -->
+    <section class="screen" id="birthdayScreen">
+      <div class="hero">
+        <p class="tiny">TODAY IS ALL ABOUT YOU</p>
+        <h2>HAPPY<br><span>BIRTHDAY</span><br><em>SAYANG</em> ♡</h2>
+        <p class="subtitle">Another beautiful chapter begins...</p>
+        <button class="primary" data-next="letterIntro">open your surprise <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- LETTER INTRO -->
+    <section class="screen" id="letterIntro">
+      <div class="content-card">
+        <div class="icon">✉</div>
+        <p class="tiny">SOMETHING I WANT TO SAY</p>
+        <h2>A Letter<br><em>For You</em></h2>
+        <p class="muted">Some words are easier to write than to say out loud.</p>
+        <button class="primary" data-next="letter">read my letter <span>♡</span></button>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="screen" id="letter">
+      <div class="page">
+        <div class="topline"><span>01</span><span>A LETTER FOR YOU</span></div>
+        <h2>Dear <em>iel,</em></h2>
+        <div class="letter-text">
+          <p>Happy 22nd birthday, babyyyy. ♡</p>
+          <p>I’m so grateful that you were born and somehow, out of all the people in this world, I got the chance to meet you and love you.</p>
+          <p>Thank you for every laugh, every conversation, every silly moment, and every memory we've collected together. Somehow, even the ordinary moments become special when they're shared with you.</p>
+          <p>As you step into another year, I hope you keep chasing the things that make your eyes sparkle. Don't be afraid to grow, to change, or to dream bigger. I'll always be cheering for you.</p>
+          <p>May this new chapter bring you beautiful surprises, peaceful nights, good people, and countless reasons to smile.</p>
+          <p>Happy 22nd, sayang. I love you, always. ♡</p>
+        </div>
+        <p class="signature">with lots of love,<br><em>someone who cares about you ♡</em></p>
+        <button class="text-button" data-next="photos">continue →</button>
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="screen" id="photos">
+      <div class="page">
+        <div class="topline"><span>02</span><span>OUR LITTLE MEMORIES</span></div>
+        <h2>Moments I<br><em>Treasure</em></h2>
+        <div class="photo-grid">
+          <div class="photo-slot"><img src="assets/ayu1.jpg" alt="Memory 1" onerror="this.style.display='none'"><span>the one I adore ♡</span></div>
+          <div class="photo-slot tall"><img src="assets/ayu2.jpg" alt="Memory 2" onerror="this.style.display='none'"><span>my pretty girl</span></div>
+          <div class="photo-slot"><img src="assets/ayu3.jpg" alt="Memory 3" onerror="this.style.display='none'"><span>cutie in disguise</span></div>
+          <div class="photo-slot"><img src="assets/ayu4.jpg" alt="Memory 3" onerror="this.style.display='none'"><span>my favorite smile</span></div>
+
+        </div>
+        <button class="text-button" data-next="playlist">next little surprise →</button>
+      </div>
+    </section>
+
+    <!-- PLAYLIST -->
+    <section class="screen" id="playlist">
+      <div class="page">
+        <div class="topline"><span>03</span><span>A SPECIAL PLAYLIST</span></div>
+        <h2>Songs that<br><em>feel like you</em> ♫</h2>
+
+        <div class="song-list">
+          <button class="song" data-audio="assets/Aku_Milikmu.mp3">
+            <span class="play">▶</span><span><b>Aku Milikmu</b><small>Dewa 19</small></span>
+          </button>
+          <button class="song" data-audio="assets/Shape_Of_My_Heart.mp3">
+            <span class="play">▶</span><span><b>Shape Of My Heart</b><small>Backstreets Boys</small></span>
+          </button>
+          <button class="song" data-audio="assets/PS_I__LOVE_YOU.mp3">
+            <span class="play">▶</span><span><b>PS I LOVE YOU</b><small>Paul</small></span>
+          </button>
+        </div>
+
+        <audio id="audioPlayer" controls></audio>
+        <button class="text-button" data-next="closing">one last thing →</button>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="screen" id="closing">
+      <div class="hero final">
+        <div class="sparkle">✦</div>
+        <p class="tiny">AND FINALLY...</p>
+        <h2>Here's to<br><em>you.</em></h2>
+        <p class="subtitle">To every dream you're chasing,<br>every smile you're going to make,<br>and every beautiful day ahead.</p>
+        <div class="heart">♡</div>
+        <p class="small-note">Happy Birthday, sayang.<br>May your year be as lovely as your heart.</p>
+        <button class="text-button" id="restart">↻ read it again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

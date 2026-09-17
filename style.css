@@ -1,0 +1,58 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#100b18;--panel:#1b1225;--pink:#eab7d8;--soft:#cda9ca;--white:#fff8ff;--line:#ffffff1c}
+html,body{width:100%;min-height:100%;font-family:Poppins,sans-serif;background:var(--bg);color:var(--white)}
+body{overflow-x:hidden}
+button{font:inherit;color:inherit;border:0;cursor:pointer}
+#particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.particle{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.35;animation:float 7s linear infinite}
+@keyframes float{0%{transform:translateY(105vh) scale(.5);opacity:0}20%{opacity:.45}80%{opacity:.3}100%{transform:translateY(-10vh) scale(1.2);opacity:0}}
+.app{position:relative;z-index:1;min-height:100vh}
+.screen{display:none;min-height:100vh;width:100%;align-items:center;justify-content:center;padding:28px 20px;animation:fade .65s ease}
+.screen.active{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.login-card,.content-card,.page{width:min(680px,100%);text-align:center}
+.login-card{padding:36px 24px}
+.tiny,.topline{letter-spacing:.25em;font-size:10px;color:#ad93ac}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:500;line-height:.9}
+h1{font-size:clamp(45px,11vw,82px);margin:18px 0}
+h1 em,h2 em{color:var(--pink);font-style:italic}
+.muted{color:#b9aabd;font-size:13px;line-height:1.8}
+.dots{display:flex;gap:13px;justify-content:center;margin:28px 0}
+.dots span{width:9px;height:9px;border:1px solid #bda8bc;border-radius:50%;transition:.2s}
+.dots span.filled{background:var(--pink);box-shadow:0 0 15px #eab7d855}
+.keypad{width:240px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.keypad button{height:58px;border:1px solid var(--line);border-radius:50%;background:#ffffff06;transition:.2s}
+.keypad button:not(.ghost):hover{background:#eab7d814;border-color:#eab7d855;transform:translateY(-2px)}
+.ghost{visibility:hidden}.hint{font-size:10px;color:#806d7d;margin-top:22px;letter-spacing:.1em}
+.hero h2{font-size:clamp(62px,16vw,125px);margin:20px 0}
+.hero h2 span{color:var(--pink);font-style:italic}
+.subtitle{font-family:"Cormorant Garamond",serif;font-size:19px;color:#c6b6c5;line-height:1.5}
+.primary{margin-top:32px;padding:14px 23px;border:1px solid #eab7d855;background:#eab7d812;border-radius:999px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+.primary:hover{background:#eab7d825;transform:translateY(-2px)}
+.primary span{margin-left:15px;color:var(--pink)}
+.content-card{padding:40px 25px}
+.icon{font-size:38px;color:var(--pink);margin-bottom:25px}
+.content-card h2{font-size:clamp(60px,14vw,105px);margin:18px 0 24px}
+.page{text-align:left;padding:30px 5px}
+.topline{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:15px}
+.page h2{font-size:clamp(55px,12vw,95px);margin:30px 0}
+.letter-text{max-width:600px;color:#c7b9c7;font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.65}
+.letter-text p{margin-bottom:18px}
+.signature{margin-top:35px;color:#a995a7;font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.5}
+.text-button{background:none;color:var(--pink);font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-top:32px;padding:8px 0;border-bottom:1px solid #eab7d855}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photo-slot{min-height:190px;background:#1b1225;border:1px solid var(--line);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.photo-slot.tall{grid-row:span 2;min-height:392px}
+.photo-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo-slot span{font-family:"Cormorant Garamond",serif;color:#a995a7;font-size:17px;text-align:center;padding:15px}
+.song-list{border-top:1px solid var(--line)}
+.song{width:100%;display:flex;align-items:center;gap:17px;text-align:left;padding:17px 5px;background:none;border-bottom:1px solid var(--line)}
+.play{width:35px;height:35px;border:1px solid #eab7d844;border-radius:50%;display:grid;place-items:center;font-size:10px;color:var(--pink)}
+.song b{display:block;font-weight:400;font-size:13px}.song small{display:block;color:#897889;font-size:10px;margin-top:3px}
+#audioPlayer{width:100%;margin-top:25px;opacity:.7}
+.final{text-align:center}.sparkle{color:var(--pink);font-size:25px;margin-bottom:18px}
+.final h2{font-size:clamp(70px,17vw,125px);margin:20px 0}
+.heart{font-size:55px;color:var(--pink);margin:28px 0 10px;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.small-note{font-family:"Cormorant Garamond",serif;color:#a995a7;font-size:17px;line-height:1.6}
+@media(max-width:500px){.photo-grid{grid-template-columns:1fr}.photo-slot.tall{grid-row:auto;min-height:260px}.photo-slot{min-height:220px}.page{padding:25px 2px}}
